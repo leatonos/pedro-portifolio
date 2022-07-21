@@ -53,6 +53,12 @@ li > a{
 .title-section{
     padding:5em;
 }
+.mobile_menu_btn{
+    display: none;
+    width: 36px;
+    float: right;
+    margin:40px 25px;
+}
 
 
 /*Custom Responsive Edits*/
@@ -63,10 +69,41 @@ li > a{
     }
     .content-container{
         margin-left:0px;
-        margin-top:145px;
     }
     .title-section{
         padding:1em;
+    }
+
+    .main-menu{
+        padding: 0px;
+    }
+
+    .menu{
+        display: none;
+        top:125px;
+        position:fixed;
+        width: 100vw;
+        z-index: 999;
+        padding: 3px 0px;
+        background-color: white;
+    }
+
+    li > a{
+        color: #00acff;
+    }
+
+    .menu > li{
+        padding: 12px 0px;
+    }
+
+    .mobile_menu_btn{
+        display: block;
+    }
+    .main-menu{
+        margin: auto;
+    }
+    section{
+        padding-top: 150px !important;
     }
   }
 
