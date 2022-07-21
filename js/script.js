@@ -2,25 +2,14 @@ $(document).ready(function(){
 
     let menu = true;
 
-    $("#mobile_btn").click(function(){
+    $("#mobile_btn, li > a").click(function(){
       menuToggle();
     });
 
-    $("li > a").click(function(){
-        menuToggle();
-      });
-
-   
-
-
-
     function menuToggle(){
-
         let screenWidth = screen.width;
-
         if(screenWidth < 992 ){
             $(".menu").slideToggle("slow");
-        
             if(menu){
                 $("#mobile_btn").attr("src", "img/close_white.png")
                 menu = false;
@@ -29,9 +18,14 @@ $(document).ready(function(){
                 menu = true;
             }
         }
-
-       
     }
 
-
+    
+    $( window ).resize(function() {
+        let screenWidth = screen.width;
+        if(screenWidth > 992 ){
+            $(".menu").fadeIn(1000);
+        }
+      });
+      
   });
