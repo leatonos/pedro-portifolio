@@ -1,0 +1,75 @@
+@font-face {
+    font-family: PatrickHand;
+    src: url(fonts/PatrickHand-Regular.ttf);
+}
+  
+h1, h2{
+    color: #00acff;
+    font-family:PatrickHand;
+}
+
+nav > ul{
+    display:block;
+    padding:0px 20px;
+    height:100%;
+    margin:auto;
+}
+
+.menu > li{
+    font-size:30px;
+    text-align:center;
+    color:white;
+    display:block;
+    padding:25% 0px;
+    font-family:PatrickHand;
+    cursor: pointer;
+}
+
+li > a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    transition: transform 1s;
+}
+
+.content{
+    height:100vh;
+}
+
+.main-menu{
+    position:fixed;
+    height: 100vh;
+    background-color:#00acff;
+}
+
+.content-container{
+   margin-left:16.66%;
+}
+
+.row{
+    max-width:100vw !important;   
+}
+
+.title-section{
+    padding:5em;
+}
+
+
+/*Custom Responsive Edits*/
+
+@media only screen and (max-width: 992px) {
+    .main-menu {
+        height: 125px !important;
+    }
+    .content-container{
+        margin-left:0px;
+        margin-top:145px;
+    }
+    .title-section{
+        padding:1em;
+    }
+  }
+
+
+
+  /* Animations */
