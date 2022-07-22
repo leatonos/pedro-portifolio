@@ -3,7 +3,7 @@
     src: url(fonts/PatrickHand-Regular.ttf);
 }
   
-h1, h2{
+h1, h2, h3{
     color: #00acff;
     font-family:PatrickHand;
 }
@@ -60,6 +60,26 @@ li > a{
     margin:40px 25px;
 }
 
+#skill-pannel{
+    height: 550px;
+}
+
+.skill{
+    color:white;
+    width: calc( 33.33% - 20px);
+    margin: 0px 10px 15px 10px;
+    color:black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.skill-title{
+    font-size: 2rem ;
+}
+
+#skill-desc{
+    
+}
 
 /*Custom Responsive Edits*/
 
@@ -105,6 +125,10 @@ li > a{
     section{
         padding-top: 150px !important;
     }
+    .skill-title{
+        font-size: 1rem ;
+    }
+    
   }
 
 

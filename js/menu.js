@@ -2,10 +2,12 @@ $(document).ready(function(){
 
     let menu = true;
 
+    //Event listener
     $("#mobile_btn, li > a").click(function(){
       menuToggle();
     });
 
+    //Mobile menu function
     function menuToggle(){
         let screenWidth = screen.width;
         if(screenWidth < 992 ){
@@ -20,12 +22,12 @@ $(document).ready(function(){
         }
     }
 
-    
+    //Responsive ajustment
     $( window ).resize(function() {
         let screenWidth = screen.width;
         if(screenWidth > 992 ){
             $(".menu").fadeIn(1000);
         }
       });
-      
+  
   });
