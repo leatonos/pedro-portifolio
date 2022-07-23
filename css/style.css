@@ -159,15 +159,42 @@ li > a{
     }
 
     .top-skill-mobile{
-        height: 80px;
-        
+        height: 10%;
+        background-color: white;
+        padding: 10px;
     }
-    
+    #skill-desc{
+        padding: 0px;
+    }
 
     .skill-image{
         padding: 0px;
     }
-    
+
+    .skill-text-container{
+        height: 75%;
+        background-color: white;
+        padding: 10px;
+    }
+
+    .skill-navbar-mobile{
+        display: flex;
+        justify-content: center;
+        height: 15%;
+        background-color: white;
+    }
+
+    .bullet{
+        width: 10px;
+        height: 10px;
+        margin: 0px 5px;
+        background-color: black;
+    }
+    .arrows{
+        width: 35px;
+        height: 35px;
+        margin: 0px 20px;
+    }
   }
 
 
