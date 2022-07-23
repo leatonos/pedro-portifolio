@@ -73,13 +73,27 @@ li > a{
     cursor: pointer;
 }
 
+.skill-image{
+    -webkit-transition: all 0.4s 0s ease-in-out;
+    -moz-transition: all 0.4s 0s ease-in-out;
+    -o-transition: all 0.4s 0s ease-in-out;
+    transition: all 0.4s 0s ease-in-out;
+    padding: 20px;
+}
+
+.skill-image:hover{
+    padding: 0;
+}
+
 .skill-title{
     font-size: 2rem ;
 }
 
-#skill-desc{
-    
+#mobile_btn_skill_close{
+    margin: 20px 10px;
 }
+
+
 
 /*Custom Responsive Edits*/
 
@@ -125,8 +139,33 @@ li > a{
     section{
         padding-top: 150px !important;
     }
+
+    #skill-pannel{
+        padding: 0px;
+        height: auto;
+    }
+    #skill-desc{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 40px 20px;
+        width: calc(100vw - 40px);
+        height: calc(100vh - 80px);
+        background-color: white;
+    }
     .skill-title{
         font-size: 1rem ;
+    }
+
+    .top-skill-mobile{
+        height: 80px;
+        
+    }
+    
+
+    .skill-image{
+        padding: 0px;
     }
     
   }
