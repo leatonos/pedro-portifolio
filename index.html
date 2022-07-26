@@ -11,7 +11,8 @@
   <script src="js/menu.js"></script>
   <script src="js/skills.js"></script>
   <script src="js/projects.js"></script>
-
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="js/email.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -87,13 +88,53 @@
         </section>
 
          <!-- About me Section -->
-        <section id="about-me" class="col-12 content title-section">
+        <section id="about-me" class="col-12 title-section">
             <div class="row">
+                
                 <div class="col-lg-6 col-12">
                     <h2>About me</h2>
+                    <img class="img-fluid" src="https://via.placeholder.com/350x350/FFFF00/000000?Text=WebsiteBuilders.com">
+                    <p style="margin-top:32px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Curabitur viverra odio lorem, et sagittis nibh fermentum blandit. 
+                        Vivamus molestie consequat massa, eu laoreet tortor molestie eget. Aliquam porta nisl sed dignissim efficitur.
+                        Phasellus eget ante quis libero malesuada maximus. Etiam lacinia commodo est, varius dignissim eros feugiat ut.
+                        Pellentesque blandit neque erat, at interdum dolor sagittis at. Fusce mattis at dolor sodales viverra. 
+                        Duis tincidunt auctor condimentum. Donec in dolor pulvinar, euismod sapien in, hendrerit diam.
+
+                        Morbi eu accumsan nulla, sit amet gravida augue. Vivamus tempor ligula risus, sit amet efficitur neque vulputate quis.
+                         Sed sodales blandit dignissim.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec orci sem,
+                         blandit ac vestibulum quis, pellentesque semper justo.
+                         Nulla facilisi. Morbi condimentum libero ex, eu dictum enim consectetur eu.
+                        Vivamus ornare mauris ac tempus ornare. Proin non iaculis velit. 
+                        Duis et porta felis. Vivamus consectetur dictum justo sed dictum.
+                    </p>
                 </div>
                 <div class="col-lg-6 col-12">
-                
+                    <p style="margin-top:32px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Curabitur viverra odio lorem, et sagittis nibh fermentum blandit. 
+                        Vivamus molestie consequat massa, eu laoreet tortor molestie eget. Aliquam porta nisl sed dignissim efficitur.
+                        Phasellus eget ante quis libero malesuada maximus. Etiam lacinia commodo est, varius dignissim eros feugiat ut.
+                        Pellentesque blandit neque erat, at interdum dolor sagittis at. Fusce mattis at dolor sodales viverra. 
+                        Duis tincidunt auctor condimentum. Donec in dolor pulvinar, euismod sapien in, hendrerit diam.
+
+                        Morbi eu accumsan nulla, sit amet gravida augue. Vivamus tempor ligula risus, sit amet efficitur neque vulputate quis.
+                         Sed sodales blandit dignissim.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec orci sem,
+                         blandit ac vestibulum quis, pellentesque semper justo.
+                         Nulla facilisi. Morbi condimentum libero ex, eu dictum enim consectetur eu.
+                        Vivamus ornare mauris ac tempus ornare. Proin non iaculis velit. 
+                        Duis et porta felis. Vivamus consectetur dictum justo sed dictum.
+                    </p>
+                    <p style="margin-top:32px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Morbi eu accumsan nulla, sit amet gravida augue. Vivamus tempor ligula risus, sit amet efficitur neque vulputate quis.
+                         Sed sodales blandit dignissim.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec orci sem,
+                         blandit ac vestibulum quis, pellentesque semper justo.
+                         Nulla facilisi. Morbi condimentum libero ex, eu dictum enim consectetur eu.
+                        Vivamus ornare mauris ac tempus ornare. Proin non iaculis velit. 
+                        Duis et porta felis. Vivamus consectetur dictum justo sed dictum.
+                    </p>
                 </div>
             <div>
         </section>
@@ -103,9 +144,27 @@
             <div class="row">
                 <div class="col-lg-6 col-12 ">
                     <h2>Contact me</h2>
+                    <form id="email_contact">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" required class="form-control" id="name" placeholder="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" required class="form-control" id="subject" placeholder="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="from_email" class="form-label">Email address</label>
+                            <input type="email" required class="form-control" id="from_email" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea required class="form-control" id="message" rows="3"></textarea>
+                          </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
-                <div class="col-lg-6 col-12">
-                   
+                <div class="col-lg-6 col-12"> 
                 </div>
             <div>
         </section>
