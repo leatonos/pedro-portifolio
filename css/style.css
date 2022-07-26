@@ -93,7 +93,14 @@ li > a{
     margin: 20px 10px;
 }
 
+#skill_number{
+    text-align: center;
+    margin: auto;
+}
 
+.skill-navbar-mobile{
+    display: none;
+}
 
 /*Custom Responsive Edits*/
 
@@ -180,7 +187,6 @@ li > a{
     .skill-navbar-mobile{
         display: flex;
         justify-content: center;
-        height: 15%;
         background-color: white;
     }
 
@@ -194,6 +200,12 @@ li > a{
         width: 35px;
         height: 35px;
         margin: 0px 20px;
+    }
+    #left_arrow{
+        float: right;
+    }
+    #skill_number{
+        font-size: 22px;
     }
   }
 

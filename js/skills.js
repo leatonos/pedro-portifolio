@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    let selectedSkillNum = 0;
+
     //List of my skills
     let skills = [
         {title:"HTML5",img:"img/icons/html.svg",desc:"Something about PHP"},
@@ -13,7 +15,6 @@ $(document).ready(function(){
         {title:"Wordpress",img:"img/icons/wordpress.svg",desc:"Something about Wordpress"}
     ]
     
-
     //This loop loads all my skills into the pannel
     skills.forEach(myFunction);
 
@@ -22,18 +23,17 @@ $(document).ready(function(){
         function myFunction(skill, i) {
             $("#skill-pannel").append('<div class="col-lg-4 col-6 skill" index="'+i+'"><img class="img-fluid skill-image" src="'+skill.img+'"><h3 class="skill-title text-center">'+skill.title+'</h3></div>');
            // $(".col-12.skill-navbar-mobile").append('<div class="bullet"></div>')
-        }
-
-        
+        }  
 
     $("#mobile_btn_skill_close").click(function(){
         $("#skill-desc").slideUp();
     });
 
-    //Click Event Listener
+    //Click on Skill Event Listener
     $(document).on('click','.col-lg-4.col-6.skill', function(){
         let screenWidth = screen.width;
         let i = $(this).attr("index");
+        selectedSkillNum = i;
         $("#skill-desc-title").text(skills[i].title)
         $("#skill-desc-text").text(skills[i].desc)
 
@@ -41,9 +41,46 @@ $(document).ready(function(){
         if(screenWidth < 992){
             $("#skill-desc").slideDown();
             let n = parseInt(i)+1;
-            $("#state").text(n+'/'+skills.length)
+            $("#skill_number").text(n+'/'+skills.length)
+            checkSkillNumber(n);
         }
 
-        });
+    });
+
+    //Click on Skill Event Listener
+    $(document).on('click','.arrows', function(){
+        
+
+        if($(this).attr("id") == "left_arrow"){
+            selectedSkillNum--;
+        }else{
+            selectedSkillNum++;
+        }
+        let i = selectedSkillNum;
+        
+        $("#skill-desc-title").text(skills[i].title)
+        $("#skill-desc-text").text(skills[i].desc)
+
+        let n = parseInt(i)+1;
+        $("#skill_number").text(n+'/'+skills.length)
+        
+        checkSkillNumber(n)
+    });
+
+    function checkSkillNumber(n){
+        //console.log("Skill number: ",n)
+        //console.log("Skill Length: ",skills.length)
+        
+        if( n == skills.length){
+            $("#right_arrow").hide()
+            $("#left_arrow").show()
+        }else if( n == 1){
+            $("#left_arrow").hide()
+            $("#right_arrow").show()
+        }else{
+            $(".arrows").show()
+        }
+
+    }
 
   });
