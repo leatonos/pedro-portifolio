@@ -2,6 +2,10 @@
     font-family: PatrickHand;
     src: url(fonts/PatrickHand-Regular.ttf);
 }
+
+body{
+    overflow-x: hidden;
+}
   
 h1, h2, h3{
     color: #00acff;
@@ -100,6 +104,24 @@ li > a{
 
 .skill-navbar-mobile{
     display: none;
+}
+
+.projects_container{
+    width: 100%;
+    margin: 0 auto;
+    float: left;
+    overflow-x: scroll;
+    padding-bottom: 35px;
+}
+
+.wrapper{
+    overflow: hidden;
+    width: 3600px;
+}
+
+.project{
+    width: 720px;
+    float: left;
 }
 
 /*Custom Responsive Edits*/

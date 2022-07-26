@@ -3,8 +3,9 @@ $(document).ready(function(){
     let menu = true;
 
     //Event listener
-    $("#mobile_btn, li > a").click(function(){
+    $("#mobile_btn_skill, li > a").click(function(){
       menuToggle();
+      console.log("you clicked me")
     });
 
     //Mobile menu function

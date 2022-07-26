@@ -18,11 +18,9 @@ $(document).ready(function(){
     //This loop loads all my skills into the pannel
     skills.forEach(myFunction);
 
-//col-12 skill-navbar-mobile
-
         function myFunction(skill, i) {
             $("#skill-pannel").append('<div class="col-lg-4 col-6 skill" index="'+i+'"><img class="img-fluid skill-image" src="'+skill.img+'"><h3 class="skill-title text-center">'+skill.title+'</h3></div>');
-           // $(".col-12.skill-navbar-mobile").append('<div class="bullet"></div>')
+           //$(".col-12.skill-navbar-mobile").append('<div class="bullet"></div>')
         }  
 
     $("#mobile_btn_skill_close").click(function(){
