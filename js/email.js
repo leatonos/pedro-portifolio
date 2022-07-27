@@ -17,15 +17,26 @@ $(document).ready(function(){
         console.log(formInfo)
 
         emailjs.send("service_jhfwf4j", "template_m1n2la3", formInfo, "xT1QY0MHIR7w2vImm");
+        
 
         $("#email_contact").trigger("reset");
 
+
+        const myTimeout = setTimeout(sentToCustomer, 3000);
+
     })
 
+    function sentToCustomer() {
 
-    
-    let formInfo;
+        let name = $("#name").val();
+        let reply_to = $("#from_email").val();
 
-    
+        let formInfo = {
+            from_name:name,
+            reply_to:reply_to,
+        }
+
+        emailjs.send("service_jhfwf4j", "template_gfcql6k", formInfo, "xT1QY0MHIR7w2vImm");
+      }    
 
 });
