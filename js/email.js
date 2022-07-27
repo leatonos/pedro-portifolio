@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $("#email_contact").submit(function(event){
+    $("#email_contact").submit(function(event, callback){
         event.preventDefault();
         let name = $("#name").val();
         let subject = $("#subject").val();
@@ -14,17 +14,18 @@ $(document).ready(function(){
             message:message
         }
 
-        console.log(formInfo)
+        //console.log(formInfo)
 
         emailjs.send("service_jhfwf4j", "template_m1n2la3", formInfo, "xT1QY0MHIR7w2vImm");
-        
+        emailjs.send("service_jhfwf4j", "template_gfcql6k", formInfo, "xT1QY0MHIR7w2vImm");
 
         $("#email_contact").trigger("reset");
 
-
-        const myTimeout = setTimeout(sentToCustomer, 3000);
-
     })
+
+    function waitTime(){
+        const myTimeout = setTimeout(sentToCustomer, 3000);
+    }
 
     function sentToCustomer() {
 
